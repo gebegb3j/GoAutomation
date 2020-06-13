@@ -7,11 +7,9 @@
 
 GoAutomation.jar - 项目封装jar，可单独在任意装有JVM的系统上运行。
 
-GoAutomation.exe - 项目exe，可以和jre1.8.0_231目录一起在任意Windows 7以上系统运行（或者自带Jre的系统）。
+GoAutomation.zip - 项目完整Windows绿色版，可以在不改变目录相对结构的情况下在任意Windows 7以上系统运行（无需Jre）。
 
 cpp目录 - 用于CRobot类的C++接口源码及dll。
-
-jre1.8.0_231目录 - 完整的Jre，配合GoAutomation.exe运行。
 
 src目录下各文件：
 
