@@ -10,7 +10,7 @@ public class GoAutomation
 {
     Robot robot;
     //CRobot cRobot;
-    boolean black_confirmed=false,white_confirmed=false,end=false,black_or_white=true,first_black=true,first_white=true;
+    boolean black_confirmed=false,white_confirmed=false,end=true,black_or_white=true,first_black=true,first_white=true;
     int black_x[][]=new int[19][19];
     int black_y[][]=new int[19][19];
     int white_x[][]=new int[19][19];
@@ -817,9 +817,16 @@ public class GoAutomation
                     automation.max_y_w=automation.white_y[18][18];
                     break;
                 case 3:
-                    automation.end=false;
-                    automation.black_or_white=true;
-                    new Thread(()->automation.play()).start();
+                    if(automation.end)
+                    {
+                        automation.end=false;
+                        automation.black_or_white=true;
+                        new Thread(()->automation.play()).start();
+                    }
+                    else
+                    {
+                        System.err.println("当前已经有一个引擎在下棋，您需要先将其关闭（Ctrl+T）。");
+                    }
                     break;
                 case 4:
                     automation.end=true;
